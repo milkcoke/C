@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#define averageScore 70.0F
 int main(void)
 {
 	int index = 0, num = 0;
@@ -15,6 +15,7 @@ int main(void)
 	printf("몇 명의 학생 입력? \t");
 	scanf("%d", &num);
 	student *ptr[3] = {NULL};// 3개의 student형 포인터를 담는 배열 , 초기화 방법에 유의 {NULL} 
+	// 요놈들은 메모리에 어떻게 배치될까? 
 
 	
 	for (index = 0 ; index < num; index++)
@@ -38,7 +39,7 @@ int main(void)
 		ptr[index]->sum = ptr[index]->korScore + ptr[index]->engScore;
 		ptr[index]->average = (double)ptr[index]->sum / 2.0;
 		
-		if(ptr[index]->average >= 70)
+		if(ptr[index]->average >= averageScore)
 		{
 		strcpy(ptr[index]->isPass, "Pass");
 		}
