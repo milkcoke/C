@@ -13,7 +13,7 @@ int main(void)
 	{
 		for(int j = 1; j<= 10; j++)
 		{
-			fscanf(fp1, "%d ", &arr[i][j]);
+			fscanf(fp1, "%d", &arr[i][j]);
 		}
 	}
 		fclose(fp1);
